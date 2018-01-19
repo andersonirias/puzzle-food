@@ -1,0 +1,17 @@
+deb http://old-releases.ubuntu.com/ubuntu/ maverick main restricted 
+
+deb http://old-releases.ubuntu.com/ubuntu/ maverick-updates main restricted 
+
+deb http://old-releases.ubuntu.com/ubuntu/ maverick universe 
+
+deb http://old-releases.ubuntu.com/ubuntu/ maverick-updates universe 
+
+deb http://old-releases.ubuntu.com/ubuntu/ maverick multiverse 
+
+deb http://old-releases.ubuntu.com/ubuntu/ maverick-updates multiverse 
+
+deb http://old-releases.ubuntu.com/ubuntu/ maverick-security main restricted 
+
+deb http://old-releases.ubuntu.com/ubuntu/ maverick-security universe 
+
+deb http://old-releases.ubuntu.com/ubuntu/ maverick-security multiverse 
