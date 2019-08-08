@@ -22,9 +22,9 @@ class FilapedidosController extends AppController
             'contain' => ['Pedidos']
         ];
         $filapedidos = $this->paginate($this->Filapedidos);
-	$session = $this->request->session();
+	    $session = $this->request->session();
         $estab = $session->read('Auth.User.id');
-	$this->set('estab',$estab);
+	    $this->set('estab',$estab);
 
         $this->set(compact('filapedidos'));
         $this->set('_serialize', ['filapedidos']);
@@ -60,11 +60,11 @@ class FilapedidosController extends AppController
 	if ($ped){
 		$pedido = array();
 		$pedido['chegada'] = date("Y-m-d H:i:s");
-                $pedido['status'] = 'Novo';
-                $pedido['observacoes'] = '';
-                $pedido['posicao'] = 0;
-                $pedido['saida'] = date("Y-m-d H:i:s");
-                $pedido['pedidos_id'] = $ped;
+        $pedido['status'] = 'Novo';
+        $pedido['observacoes'] = '';
+        $pedido['posicao'] = 0;
+        $pedido['saida'] = date("Y-m-d H:i:s");
+        $pedido['pedidos_id'] = $ped;
 
 		$filapedido = $this->Filapedidos->patchEntity($filapedido, $pedido);
 		
@@ -106,7 +106,7 @@ class FilapedidosController extends AppController
 
         if ($this->request->is('post')) {
             $filapedido = $this->Filapedidos->patchEntity($filapedido, $this->request->data);
-		debug($this->request->data);
+	
             if ($this->Filapedidos->save($filapedido)) {
                 $this->Flash->success(__('The filapedido has been saved.'));
 

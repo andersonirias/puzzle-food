@@ -54,9 +54,9 @@ class PratosController extends AppController
         $prato = $this->Pratos->newEntity();
         if ($this->request->is('post')) {
             $prato = $this->Pratos->patchEntity($prato, $this->request->data);
-	    $prato['imagem'] = $this->request->data(['imagem','name']);
-	    $prato['criacao'] = date("Y-m-d H:i:s");
-	    $prato['alteracao'] = date("Y-m-d H:i:s");
+            $prato['imagem'] = $this->request->data(['imagem','name']);
+            $prato['criacao'] = date("Y-m-d H:i:s");
+            $prato['alteracao'] = date("Y-m-d H:i:s");
 	    if (move_uploaded_file($this->request->data(['imagem','tmp_name']),WWW_ROOT.'img/'.$prato['imagem'])){
             	if ($this->Pratos->save($prato)) {
                 	$this->Flash->success(__('Prato salvo com sucesso.'));

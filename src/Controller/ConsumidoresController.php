@@ -55,9 +55,9 @@ class ConsumidoresController extends AppController
         $consumidore = $this->Consumidores->newEntity();
         if ($this->request->is('post')) {
             $consumidore = $this->Consumidores->patchEntity($consumidore, $this->request->data);
-	    $consumidore['senha'] = crypt($consumidore['senha'],'$2a$'.'08'.'$'.'Cf1f11ePArKlBJomM0F6aJ'.'$');
-	    $consumidore['criacao'] = date("Y-m-d H:i:s");
-	    $consumidore['alteracao'] = date("Y-m-d H:i:s");
+            $consumidore['senha'] = crypt($consumidore['senha'],'$2a$'.'08'.'$'.'Cf1f11ePArKlBJomM0F6aJ'.'$');
+            $consumidore['criacao'] = date("Y-m-d H:i:s");
+            $consumidore['alteracao'] = date("Y-m-d H:i:s");
             $consumidore['permissao'] = 1;
             if ($this->Consumidores->save($consumidore)) {
                 $this->Flash->success(__('Cadastro realizado com sucesso.'));

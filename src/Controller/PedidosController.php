@@ -50,14 +50,14 @@ class PedidosController extends AppController
      */
     public function add()
     {	
-	$this->loadModel('Ingredientes');
-	$this->loadModel('Pratos');
-	$this->loadModel('Categorias');
-	$this->loadModel('Filapedidos');
+        $this->loadModel('Ingredientes');
+        $this->loadModel('Pratos');
+        $this->loadModel('Categorias');
+        $this->loadModel('Filapedidos');
 
-	$listaIngredientes = $this->paginate($this->Ingredientes);
-	$listaPratos = $this->paginate($this->Pratos);
-	$listaCategorias = $this->paginate($this->Categorias);
+        $listaIngredientes = $this->paginate($this->Ingredientes);
+        $listaPratos = $this->paginate($this->Pratos);
+        $listaCategorias = $this->paginate($this->Categorias);
 
         $pedido = $this->Pedidos->newEntity();
 
@@ -84,9 +84,9 @@ class PedidosController extends AppController
 
         }
         $consumidores = $this->Pedidos->Consumidores->find('list', ['limit' => 200]);
-	$this->set(compact('listaIngredientes',$listaIngredientes));
-	$this->set(compact('listaPratos',$listaPratos));
-	$this->set(compact('listaCategorias',$listaCategorias));
+        $this->set(compact('listaIngredientes',$listaIngredientes));
+        $this->set(compact('listaPratos',$listaPratos));
+        $this->set(compact('listaCategorias',$listaCategorias));
         $this->set(compact('pedido', 'consumidores'));
         $this->set('_serialize', ['pedido']);
     }
