@@ -19,5 +19,19 @@ atendimento.
 De forma divertida, os ingredientes dos cardápios estarão disponíveis para os
 clientes arrastarem na tela e montarem os pratos personalizados.
 
-## Configuração
+## Configuração da aplicação
+
+### Requisitos do sistema
+
+* HTTP Server.
+* PHP 7
+* Extensão PHP mbstring 
+* Extensão PHP intl
+* Extensão PHP simplexml
+* Extensão PHP PDO
+* MySQL
+
+### Configuração
+
+* Verifique detalhes da instalação no site oficial do CakePHP https://book.cakephp.org/3.0/en/installation.html
 
